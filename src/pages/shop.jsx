@@ -20,7 +20,7 @@ export const Shop = () => {
 
   return (
     <div className='container'>
-      <h1 className='text-center py-10 text-[32px]'>Shop</h1>
+      <h1 className='text-center mt-10 py-10 text-[32px]'>Shop</h1>
       <ProductList products={products} /> 
     </div>
   );

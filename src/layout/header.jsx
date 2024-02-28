@@ -7,7 +7,7 @@ export const Header = () => {
     const count = cartItems.length;
 
     return (
-        <header className='py-5 border-b '>
+        <header className='py-5 border-b fixed top-0 left-0 right-0 bg-white '>
             <div className="container">
                 <div className='flex items-center justify-between'>
                     <a href="#">
