@@ -3,7 +3,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import cartReducer from './reducers/cart-reducer';
 import { loadState, saveState } from '../lib/storage';
 
-const persistedState = loadState('reduxState');
+const persistedState = loadState('products');
 
 const store = configureStore({
   reducer: {
@@ -13,7 +13,7 @@ const store = configureStore({
 });
 
 store.subscribe(() => {
-  saveState('reduxState', store.getState());
+  saveState('products', store.getState());
 });
 
 export default store;

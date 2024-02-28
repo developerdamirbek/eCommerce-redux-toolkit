@@ -1,7 +1,11 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 
 export const Header = () => {
+    const cartItems = useSelector(state => state.cart.items);
+    const count = cartItems.length;
+
     return (
         <header className='py-5 border-b '>
             <div className="container">
@@ -18,7 +22,7 @@ export const Header = () => {
                             </li>
                             <li>
                                 <NavLink to='/cart'>
-                                    Cart
+                                    Cart ({count})
                                 </NavLink>
                             </li>
                         </ul>
